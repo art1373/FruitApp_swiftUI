@@ -31,9 +31,7 @@ struct FruitDetailView: View {
                         //DESCRIPTION
                         Text(fruit.description).multilineTextAlignment(.leading).foregroundColor(fruit.gradientColors[0])
                         //LINK
-                        SourceLinkView(fruit: fruit)
-                            .padding(.bottom,40)
-                            .padding(.top, 10)
+                        SourceLinkView(fruit: fruit).padding(.bottom,40).padding(.top, 10)
                     }//:VSTACK
                     .padding(.horizontal,20).frame(maxWidth:640, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }//:VSTACK
@@ -41,6 +39,8 @@ struct FruitDetailView: View {
             }//:Scroll
             .edgesIgnoringSafeArea(.top)
         }//:Navigation
+        .navigationViewStyle(StackNavigationViewStyle())
+        
     }
 }
 
